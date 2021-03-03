@@ -1,0 +1,157 @@
+* {
+    font-family: 'Open Sans', sans-serif;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(0,0,0,.05) !important;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff !important;
+}
+header {
+    width: 100%;
+    height: 100vh;
+}
+nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    z-index: 99;
+    background-color: rgba(0,0,0,.7);
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+}
+nav.open {
+    top: 0;
+    border-radius: initial;
+}
+.nav-list {
+    width: 100%;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+}
+li {
+    margin: 0 2rem;
+}
+.nav-link {
+    font-family: cursive;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.nav-link:hover, .nav-link:focus {
+    color: rgb(138, 121, 121) !important;
+}
+.menu-toggler {
+    position: fixed;
+    top: 2rem;
+    right: 5rem;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 650ms ease-out;
+}
+.menu-toggler.open {
+    transform: rotate(-45deg);
+}
+.bar {
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    border-radius: 0.8rem;
+}
+.bar.half {
+    width: 50%;
+}
+.bar.top {
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+.open .bar.top {
+    transform: rotate(-90deg) translateX(0.8rem);
+}
+.bar.bottom {
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+.open .bar.bottom {
+    transform: rotate(-90deg) translateX(-0.8rem);
+}
+.pic1{
+    height: 80%;
+    width: 100%;
+    transition: all 1s linear;
+}
+.pic1:hover{
+    transform: scale(1.2);
+}
+p{
+    line-height: 1.5;
+}
+
+
+.logo{
+    position: relative;
+    top: 2rem;
+    right: 5rem;;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+
+.logo a img{
+    height: 15%;
+    width: 15%;
+    transition: all 1s linear;
+}
+.logo-hover:hover{
+    height: 40%;
+    width: 40%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        width: 100%;
+    }
+    .nav-list {
+        flex-direction: column;
+    }
+    li {
+        margin: 2rem 0;
+    }
+    .nav-link {
+        font-size: 2.5rem;
+    }
+    .logo a img{
+        height: 25%;
+        width: 25%;
+    }
+    .logo{
+        position: fixed;
+        top: 1rem;
+        left: 3rem;
+    }
+
+}
+
